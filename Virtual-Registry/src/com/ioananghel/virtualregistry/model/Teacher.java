@@ -1,4 +1,4 @@
-package com.ioananghel.virtualregistry;
+package com.ioananghel.virtualregistry.model;
 
 import java.util.List;
 

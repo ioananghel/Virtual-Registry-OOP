@@ -1,5 +1,9 @@
 package com.ioananghel.virtualregistry;
 
+import com.ioananghel.virtualregistry.model.Grade;
+import com.ioananghel.virtualregistry.model.Student;
+import com.ioananghel.virtualregistry.model.Subject;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,7 +16,7 @@ public class RunApp {
         List<Grade> grades = new ArrayList<>();
         Grade mathematicsGrade = new Grade(maths, 10.0);
         grades.add(mathematicsGrade);
-        Student student = new Student("anghel", "ioan", "50207", "fundulea", "070sanse", "07", 3, 10.0, currentlyAttending, grades);
+        Student student = new Student("anghel", "ioan", "50207", "fundulea", "070sanse", "07", 3, currentlyAttending, grades);
         System.out.println(student.getName());
         System.out.println(student.getInfo());
         System.out.println(student.getAllInfo());

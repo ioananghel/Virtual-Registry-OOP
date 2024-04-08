@@ -1,4 +1,4 @@
-package com.ioananghel.virtualregistry;
+package com.ioananghel.virtualregistry.model;
 
 import java.util.List;
 
@@ -6,18 +6,16 @@ public class Student extends Person
 {
     private String registrationNumber;
     private int yearOfStudies;
-    private double gradeAverage;
     private List<Subject> currentlyAttending;
     private List<Grade> grades;
 
     public Student(String name, String surname, String cnp, String address, String phoneNumber,
-                   String registrationNumber, int yearOfStudies, double gradeAverage,
+                   String registrationNumber, int yearOfStudies,
                    List<Subject> currentlyAttending, List<Grade> grades)
     {
         super(name, surname, cnp, address, phoneNumber);
         this.registrationNumber = registrationNumber;
         this.yearOfStudies = yearOfStudies;
-        this.gradeAverage = gradeAverage;
         this.currentlyAttending = currentlyAttending;
         this.grades = grades;
     }
@@ -35,11 +33,6 @@ public class Student extends Person
     public int getYearOfStudies()
     {
         return yearOfStudies;
-    }
-
-    public double getGradeAverage()
-    {
-        return gradeAverage;
     }
 
     public List<Subject> getCurrentlyAttending()
@@ -62,11 +55,6 @@ public class Student extends Person
         this.yearOfStudies = yearOfStudies;
     }
 
-    public void setGradeAverage(double gradeAverage)
-    {
-        this.gradeAverage = gradeAverage;
-    }
-
     public void setCurrentlyAttending(List<Subject> currentlyAttending)
     {
         this.currentlyAttending = currentlyAttending;
@@ -80,7 +68,7 @@ public class Student extends Person
     @Override
     public String getAllInfo()
     {
-        return super.getAllInfo() + ", " + getRegistrationNumber() + ", " + getYearOfStudies() + ", " + getGradeAverage() + ", " + getCurrentlyAttending() + ", " + getGrades();
+        return super.getAllInfo() + ", " + getRegistrationNumber() + ", " + getYearOfStudies() + ", " + getCurrentlyAttending() + ", " + getGrades();
     }
 
     @Override
