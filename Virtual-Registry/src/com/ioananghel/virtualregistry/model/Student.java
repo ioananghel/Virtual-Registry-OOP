@@ -7,17 +7,15 @@ public class Student extends Person
     private String registrationNumber;
     private int yearOfStudies;
     private List<Subject> currentlyAttending;
-    private List<Grade> grades;
 
     public Student(String name, String surname, String cnp, String address, String phoneNumber,
                    String registrationNumber, int yearOfStudies,
-                   List<Subject> currentlyAttending, List<Grade> grades)
+                   List<Subject> currentlyAttending)
     {
         super(name, surname, cnp, address, phoneNumber);
         this.registrationNumber = registrationNumber;
         this.yearOfStudies = yearOfStudies;
         this.currentlyAttending = currentlyAttending;
-        this.grades = grades;
     }
 
     @Override
@@ -40,11 +38,6 @@ public class Student extends Person
         return currentlyAttending;
     }
 
-    public List<Grade> getGrades()
-    {
-        return grades;
-    }
-
     public void setRegistrationNumber(String registrationNumber)
     {
         this.registrationNumber = registrationNumber;
@@ -60,15 +53,10 @@ public class Student extends Person
         this.currentlyAttending = currentlyAttending;
     }
 
-    public void setGrades(List<Grade> grades)
-    {
-        this.grades = grades;
-    }
-
     @Override
     public String getAllInfo()
     {
-        return super.getAllInfo() + ", " + getRegistrationNumber() + ", " + getYearOfStudies() + ", " + getCurrentlyAttending() + ", " + getGrades();
+        return super.getAllInfo() + ", " + getRegistrationNumber() + ", " + getYearOfStudies() + ", " + getCurrentlyAttending();
     }
 
     @Override
@@ -77,8 +65,4 @@ public class Student extends Person
         return "Student";
     }
 
-    public void addGrade(Grade grade)
-    {
-        this.grades.add(grade);
-    }
 }
