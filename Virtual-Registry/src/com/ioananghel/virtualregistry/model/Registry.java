@@ -1,4 +1,6 @@
 package com.ioananghel.virtualregistry.model;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -18,6 +20,13 @@ public class Registry {
         return instance;
     }
     public List<Grade> getGrades() {
+//        return grades;
+        Collections.sort(grades, new Comparator<Grade>() {
+            @Override
+            public int compare(Grade g1, Grade g2) {
+                return Double.compare(g2.getGrade(), g1.getGrade());
+            }
+        });
         return grades;
     }
     public void setGrades(List<Grade> grades) {
