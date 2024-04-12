@@ -36,5 +36,11 @@ public class Grade {
     public void setGrade(double grade) {
         this.grade = grade;
     }
-
+    //comparable method: compare grades(ascending order by name and grades
+    public int compareTo(Grade grade) {
+        if (this.getGrade() == grade.getGrade()) {
+            return this.getSubject().getName().compareTo(grade.getSubject().getName());
+        }
+        return Double.compare(this.getGrade(), grade.getGrade());
+    }
 }
