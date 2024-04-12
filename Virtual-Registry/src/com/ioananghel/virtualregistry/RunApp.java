@@ -16,7 +16,7 @@ public class RunApp {
         List<Grade> grades = new ArrayList<>();
         Grade mathematicsGrade = new Grade("07", maths, 10.0);
         grades.add(mathematicsGrade);
-        Student student = new Student("anghel", "ioan", "50207", "fundulea", "070sanse", "07", 3, currentlyAttending);
+        Student student = new Student("anghel", "ioan", "50207", "bucuresti", "0746", "07", 3, currentlyAttending);
         System.out.println(student.getName());
         System.out.println(student.getInfo());
         System.out.println(student.getAllInfo());
@@ -46,8 +46,10 @@ public class RunApp {
         subjects.add(maths);
         List<Subject> teacherSubjects = new ArrayList<>();
         teacherSubjects.add(maths);
-        Teacher teacher = new Teacher("anghel", "ioan", "50207", "fundulea", "070sanse", teacherSubjects);
+        Teacher teacher = new Teacher("anghel", "alex", "50209", "fundulea", "0747", teacherSubjects);
         System.out.println(teacher.getName());
+        System.out.println(teacher.getInfo());
+        System.out.println(teacher.getAllInfo());
 
         List<Grade> teacherGrades = new ArrayList<>();
         Grade teacherGrade = new Grade("07", maths, 10.0);
